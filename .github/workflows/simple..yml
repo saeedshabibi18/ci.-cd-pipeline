@@ -23,7 +23,7 @@ jobs:
           run: echo "checking out code..."
         - name: Build docker image
           run: |
-            docker build -t python-hello-world:latest ./app
+            docker build -t python-hello-world:latest .
             echo "Docker image built successfully."
   deploy:
       runs-on: ubuntu-latest
