@@ -14,18 +14,15 @@ jobs:
         - name: checkout code
           uses: actions/checkout@v4
 
+        - name: Set up Python 3.9
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.9'
+
         - name: Print debug and dummy test  
           run: echo "checking out code..."
-  build-docker-image:
-      runs-on: ubuntu-latest
-      steps:
-        - name: checkout code
-          uses: actions/checkout@v4
-
         - name: Build docker image
           run: |
-            COPY . /app
-            cd /app
             docker build -t python-hello-world:latest .
             echo "Docker image built successfully."
 
