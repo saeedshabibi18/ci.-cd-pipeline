@@ -24,7 +24,9 @@ jobs:
 
         - name: Build docker image
           run: |
+            COPY . /app
+            cd /app
             docker build -t python-hello-world:latest .
             echo "Docker image built successfully."
-            
+
 
