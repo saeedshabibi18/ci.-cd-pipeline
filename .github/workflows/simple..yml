@@ -36,4 +36,5 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          tags: ${{ vars.DOCKER_USERNAME }}/python-hello-world:latest
+          tags: ${{ vars.DOCKER_USERNAME }}/python-hello-world:latest 
+          
