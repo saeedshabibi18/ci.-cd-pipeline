@@ -25,5 +25,10 @@ jobs:
           run: |
             docker build -t python-hello-world:latest ./app
             echo "Docker image built successfully."
+        - name: docker push 
+          uses: docker/build-push-action@v5
+          with: 
+            push: true 
+            tags: ${{ vars.DOCKER_USERNAME }}/python-hello-world:latest
 
 
